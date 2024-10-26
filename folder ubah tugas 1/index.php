@@ -1,6 +1,6 @@
 <?php
 require 'functions.php';
-$mahasiswa = query("SELECT * FROM mahasiswa ORDER BY nama LIMIT 10");
+$mahasiswa = query("SELECT * FROM mahasiswa ORDER BY nama LIMIT 20");
 
 //ambil data dari query
 //$result = mysqli_query($conn, "SELECT id, nim, nama FROM mahasiswa ORDER BY nama LIMIT 10");
@@ -25,10 +25,11 @@ $mahasiswa = query("SELECT * FROM mahasiswa ORDER BY nama LIMIT 10");
 <table border="1" cellpadding="10" cellspacing="0">
 
     <tr>
-        <th>No</th>
+        <th>NO</th>
         <th>ID</th>
         <th>NIM</th>
-        <th>Nama</th>
+        <th>NAMA</th>
+        <th>ACTION</th>
     </tr>
 
     <?php 
