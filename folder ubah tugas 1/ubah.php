@@ -13,7 +13,7 @@ $mhs = query("SELECT * FROM mahasiswa WHERE id = $id")[0];
 if( isset($_POST["submit"]))  {
 
 //cek keberhasilan
-if( tambah($_POST) > 0) {
+if( ubah($_POST) > 0) {
     echo "
     <script>
         alert('data berhasil diubah!') ;
@@ -47,6 +47,7 @@ if( tambah($_POST) > 0) {
     <h1>Ubah data mahasiswa</h1>
 
     <form action="" method="post">
+        <input type="hidden" name="id" value="<?= $mhs["id"]; ?>">
         <ul>
             <li>
                 <label for="nim">NIM : </label>
