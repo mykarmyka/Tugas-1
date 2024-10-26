@@ -37,6 +37,27 @@ function hapus($id) {
 }
 
 
+function ubah($data){
+    global $conn;
+
+    $id = $data["id"];
+    $nim = htmlspecialchars($data["nim"]);
+    $nama = htmlspecialchars($data["nama"]);
+
+
+
+    $query = "UPDATE mahasiswa SET 
+                nim = '$nim',
+                nama = '$nama'
+                WHERE id = $id
+    ";
+
+    mysqli_query($conn, $query);
+
+    return mysqli_affected_rows($conn);
+}
+
+
 
 
 ?>
